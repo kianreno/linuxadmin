@@ -84,12 +84,69 @@ user { 'mscott':
     password =>  
     comment => 'Michael Scott',
     gid => 'mscott',
-    groups => ['managers', 'sales', 'accounting'],
+    groups => ['managers'],
     membership => minimum,
     shell => '/bin/bash',
     home => '/home/mscott',
     managehome => true,
 }   
+user { 'dschrute':
+    uid => '5003',
+    ensure => 'present',
+    comment => 'Dwight Schrute',
+    gid => 'dschrute',
+    groups => ['managers'],
+    membership => minimum,
+    shell => '/bin/bash',
+    home => '/home/dschrute',
+    managehome => true,
+}
+user { 'jhalpert':
+    uid => '5004',
+    ensure => 'present',
+    comment => 'Jim Halpert',
+    gid => 'jhalpert',
+    groups => ['managers'],
+    membership => minimum,
+    shell => '/bin/bash',
+    home => '/home/jhalpert',
+    managehome => true,
+}
+user { 'pbeesly':
+    uid => '5005',
+    ensure => 'present',
+    comment => 'Pam H Beesly',
+    password => 
+    gid => 'pbeesly',
+    membership => minimum,
+    shell => '/bin/bash',
+    home => '/home/pbeesly',
+    managehome => true,
+}
+user { 'abernard':
+    uid => '5006',
+    ensure => 'present',
+    comment => 'Andy Bernard',
+    groups => ['sales'],
+    password => 
+    gid => 'abernard',
+    membership => minimum,
+    shell => '/bin/bash',
+    home => '/home/abernard',
+    managehome => true,
+}
+user { 'amartin':
+    uid => '5007',
+    ensure => 'present',
+    comment => 'Angela Martin',
+    groups => ['accounting'],
+    password => 
+    gid => 'amartin',
+    membership => minimum,
+    shell => '/bin/bash',
+    home => '/home/amartin',
+    managehome => true,
+}
 file { '/home/mscott':
     ensure => 'directory',
     owner => 'mscott',
@@ -97,55 +154,33 @@ file { '/home/mscott':
     recurse => true,
     group  => 'mscott',
 }
-user { 'dschrute':
-    uid => '5003',
-    ensure => 'present',
-    comment => 'Dwight Schrute',
-    gid => 'dschrute',
-    groups => ['managers', 'sales'],
-    membership => minimum,
-    shell => '/bin/bash',
-    home => '/home/dschrute',
-    managehome => true,
-}
 file { '/home/dschrute':
     ensure => 'directory',
     owner => 'dschrute',
+    source => '/etc/skel',
     recures => true,
     group  => 'dschrute',
-}
-user { 'jhalpert':
-    uid => '504',
-    ensure => 'present',
-    comment => 'Jim Halpert',
-    gid => 'jhalpert',
-    groups => ['managers', 'sales'],
-    membership => minimum,
-    shell => '/bin/bash',
-    home => '/home/jhalpert',
-    managehome => true,
 }
 file { '/home/jhalpert':
     ensure => 'directory',
     owner => 'jhalpert',
+    source => '/etc/skel',
     recurse => true,
     group  => 'jhalpert',
-}
-user { 'pbeesly':
-    uid => '505',
-    ensure => 'present',
-    comment => 'Pam H Beesly',
-    password => 
-    gid => 'pbeesly',
-    groups => ['sales'],
-    membership => minimum,
-    shell => '/bin/bash',
-    home => '/home/pbeesly',
-    managehome => true,
 }
 file { '/home/pbeesly':
     ensure => 'directory',
     owner => 'pbeesly',
+    source => '/etc/skel',
     recurse => true,
     group  => 'pbeesly',
+}
+
+
+
+file { '/home/managers':
+    ensure => 'directory',
+    owner => 'kreno',
+    group  => 'kreno',
+    mode => '2770',
 }
