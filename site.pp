@@ -339,11 +339,57 @@ file { '/home/tflenderson':
     recurse => true,
     group  => 'tflenderson',
 }
-
-
-file { '/home/managers':
+file { '/home/kmalone':
     ensure => 'directory',
-    owner => 'kreno',
-    group  => 'kreno',
-    mode => '2770',
+    owner => 'kmalone',
+    source => '/etc/skel',
+    recurse => true,
+    group  => 'kmalone',
 }
+file { '/home/plapin':
+    ensure => 'directory',
+    owner => 'plapin',
+    source => '/etc/skel',
+    recurse => true,
+    group  => 'plapin',
+}
+file { '/home/shudson':
+    ensure => 'directory',
+    owner => 'shudson',
+    source => '/etc/skel',
+    recurse => true,
+    group  => 'shudson',
+}
+file { '/home/mpalmer':
+    ensure => 'directory',
+    owner => 'mpalmer',
+    source => '/etc/skel',
+    recurse => true,
+    group  => 'mpalmer',
+}
+file { '/home/cbratton':
+    ensure => 'directory',
+    owner => 'cbratton',
+    source => '/etc/skel',
+    recurse => true,
+    group  => 'cbratton',
+}
+
+#file { '/home/managers':
+#    ensure => 'directory',
+#    owner => 'kreno',
+#    group  => 'kreno',
+#    mode => '2770',
+#}
+#file { '/home/accounting':
+#    ensure => 'directory',
+#    owner => 'kreno',
+#    group  => 'kreno',
+#    mode => '2770',
+#}
+#file { '/home/sales':
+#    ensure => 'directory',
+#    owner => 'kreno',
+#    group  => 'kreno',
+#    mode => '2770',
+#}
