@@ -15,74 +15,74 @@ group { 'admin':
     ensure => 'present',
     gid => '6004',
 }
-#group { 'mscott':
- #   ensure => 'present',
- #   gid => '5002',
-#}
-#group { 'dschrute':
- #   ensure => 'present',
- #   gid => '5003',
-#}
-#group { 'jhalpert':
- #   ensure => 'present',
- #   gid => '5004',
-#}
-#group { 'pbeesly':
- #   ensure => 'present',
- #   gid => '5005',
-#}
-#group { 'abernard':
- #   ensure => 'present',
- #   gid => '5006',
-#}
-#group { 'amartin':
- #   ensure => 'present',
- #   gid => '5007',
-#}
-#group { 'kkapoor':
- #   ensure => 'present',
- #   gid => '5008',
-#}
-#group { 'omartinez':
- #   ensure => 'present',
- #   gid => '5009',
-#}
-#group { 'dphilbin':
-#    ensure => 'present',
-#    gid => '5010',
-#}
-#group { 'tflenderson':
-#    ensure => 'present',
-#    gid => '5011',
-#}
-#group { 'kmalone':
-#    ensure => 'present',
-#    gid => '5012',
-#}
-#group { 'plapin':
-#    ensure => 'present',
-#    gid => '5013',
-#}
-#group { 'shudson':
-#    ensure => 'present',
-#    gid => '5014',
-#}
-#group { 'mpalmer':
-#    ensure => 'present',
-#    gid => '5015',
-#}
-#group { 'cbratton':
-#    ensure => 'present',
-#    gid => '5016',
-#}
-#group { 'kreno':
-#    ensure => 'present',
-#    gid => '5017',
-#}
+group { 'mscott':
+    ensure => 'present',
+    gid => '5002',
+}
+group { 'dschrute':
+    ensure => 'present',
+    gid => '5003',
+}
+group { 'jhalpert':
+    ensure => 'present',
+    gid => '5004',
+}
+group { 'pbeesly':
+    ensure => 'present',
+    gid => '5005',
+}
+group { 'abernard':
+    ensure => 'present',
+    gid => '5006',
+}
+group { 'amartin':
+    ensure => 'present',
+    gid => '5007',
+}
+group { 'kkapoor':
+    ensure => 'present',
+    gid => '5008',
+}
+group { 'omartinez':
+    ensure => 'present',
+    gid => '5009',
+}
+group { 'dphilbin':
+    ensure => 'present',
+    gid => '5010',
+}
+group { 'tflenderson':
+    ensure => 'present',
+    gid => '5011',
+}
+group { 'kmalone':
+    ensure => 'present',
+    gid => '5012',
+}
+group { 'plapin':
+    ensure => 'present',
+    gid => '5013',
+}
+group { 'shudson':
+    ensure => 'present',
+    gid => '5014',
+}
+group { 'mpalmer':
+    ensure => 'present',
+    gid => '5015',
+}
+group { 'cbratton':
+    ensure => 'present',
+    gid => '5016',
+}
+group { 'kreno':
+    ensure => 'present',
+    gid => '5017',
+}
 user { 'mscott':
     uid => '5002',
-    ensure => 'present',
-    password =>  
+    ensure => present,
+#    password =>  
     comment => 'Michael Scott',
 #    gid => 'mscott',
     groups => ['managers', 'mscott'],
@@ -93,7 +93,7 @@ user { 'mscott':
 }   
 user { 'dschrute':
     uid => '5003',
-    ensure => 'present',
+    ensure => present,
     comment => 'Dwight Schrute',
 #    gid => 'dschrute',
     groups => ['managers', 'dschrute'],
@@ -104,7 +104,7 @@ user { 'dschrute':
 }
 user { 'jhalpert':
     uid => '5004',
-    ensure => 'present',
+    ensure => present,
     comment => 'Jim Halpert',
 #    gid => 'jhalpert',
     groups => ['managers', 'jhalpert'],
@@ -115,11 +115,11 @@ user { 'jhalpert':
 }
 user { 'pbeesly':
     uid => '5005',
-    ensure => 'present',
+    ensure => present,
     comment => 'Pam H Beesly',
-    password => 
+#    password => 
 #    gid => 'pbeesly',
-    groups => ['pbeesly']
+    groups => ['pbeesly'],
     membership => minimum,
     shell => '/bin/bash',
     home => '/home/pbeesly',
@@ -127,10 +127,10 @@ user { 'pbeesly':
 }
 user { 'abernard':
     uid => '5006',
-    ensure => 'present',
+    ensure => present,
     comment => 'Andy Bernard',
     groups => ['sales', 'abernard'],
-    password => 
+#    password => 
 #    gid => 'abernard',
     membership => minimum,
     shell => '/bin/bash',
@@ -139,10 +139,10 @@ user { 'abernard':
 }
 user { 'amartin':
     uid => '5007',
-    ensure => 'present',
+    ensure => present,
     comment => 'Angela Martin',
     groups => ['accounting', 'amartin'],
-    password => 
+#    password => 
 #    gid => 'amartin',
     membership => minimum,
     shell => '/bin/bash',
@@ -151,10 +151,10 @@ user { 'amartin':
 }
 user { 'kkapoor':
     uid => '5008',
-    ensure => 'present',
+    ensure => present,
     comment => 'Kelly Kapoor',
     groups => ['kkapoor'],
-    password => 
+#    password => 
 #    gid => 'kkapoor',
     membership => minimum,
     shell => '/bin/bash',
@@ -163,10 +163,10 @@ user { 'kkapoor':
 }
 user { 'omartinez':
     uid => '5009',
-    ensure => 'present',
+    ensure => present,
     comment => 'Oscar Martinez',
     groups => ['accounting', 'omartinez'],
-    password => 
+#    password => 
 #    gid => 'omartinez',
     membership => minimum,
     shell => '/bin/bash',
@@ -175,10 +175,10 @@ user { 'omartinez':
 }
 user { 'dphilbin':
     uid => '5010',
-    ensure => 'present',
+    ensure => present,
     comment => 'Darryl Philbin',
     groups => ['dphilbin'],
-    password => 
+#    password => 
 #    gid => 'dphilbin',
     membership => minimum,
     shell => '/bin/bash',
@@ -187,10 +187,10 @@ user { 'dphilbin':
 }
 user { 'tflenderson':
     uid => '5011',
-    ensure => 'present',
+    ensure => present,
     comment => 'Toby Flenderson',
     groups => ['tflenderson'],
-    password => 
+#    password => 
 #    gid => 'tflenderson',
     membership => minimum,
     shell => '/bin/bash',
@@ -199,10 +199,10 @@ user { 'tflenderson':
 }
 user { 'kmalone':
     uid => '5012',
-    ensure => 'present',
+    ensure => present,
     comment => 'Kevin Malone',
     groups => ['accounting', 'kmalone'],
-    password => 
+#    password => 
 #    gid => 'kmalone',
     membership => minimum,
     shell => '/bin/bash',
@@ -211,10 +211,10 @@ user { 'kmalone':
 }
 user { 'plapin':
     uid => '5013',
-    ensure => 'present',
+    ensure => present,
     comment => 'Phyllis Lapin',
     groups => ['sales', 'plapin'],
-    password => 
+#    password => 
 #    gid => 'plapin',
     membership => minimum,
     shell => '/bin/bash',
@@ -223,10 +223,10 @@ user { 'plapin':
 }
 user { 'shudson':
     uid => '5014',
-    ensure => 'present',
+    ensure => present,
     comment => 'Stanley Hudson',
     groups => ['sales', 'shudson'],
-    password => 
+#    password => 
 #    gid => 'shudson',
     membership => minimum,
     shell => '/bin/bash',
@@ -235,10 +235,10 @@ user { 'shudson':
 }
 user { 'mpalmer':
     uid => '5015',
-    ensure => 'present',
+    ensure => present,
     comment => 'Meredith Palmer',
     groups => ['mpalmer'],
-    password => 
+#    password => 
 #    gid => 'mpalmer',
     membership => minimum,
     shell => '/bin/bash',
@@ -247,10 +247,10 @@ user { 'mpalmer':
 }
 user { 'cbratton':
     uid => '5016',
-    ensure => 'present',
+    ensure => present,
     comment => 'Creed Bratton',
     groups => ['cbratton'],
-    password => 
+#    password => 
 #    gid => 'cbratton',
     membership => minimum,
     shell => '/bin/bash',
@@ -259,118 +259,118 @@ user { 'cbratton':
 }
 user { 'kreno':
     uid => '5017',
-    ensure => 'present',
+    ensure => present,
     comment => 'Kian Reno',
     groups => ['admin', 'root', 'kreno'],
-    password => 
+#    password => 
 #    gid => 'kreno',
     membership => minimum,
     shell => '/bin/bash',
     home => '/home/kreno',
     managehome => true,
 }
-file { '/home/mscott':
+file { '/home/mscott/skel':
     ensure => 'directory',
     owner => 'mscott',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'mscott',
 }
-file { '/home/dschrute':
+file { '/home/dschrute/skel':
     ensure => 'directory',
     owner => 'dschrute',
-    source => '/etc/skel',
-    recures => true,
+    source => 'file:///etc/skel',
+    recurse => true,
     group  => 'dschrute',
 }
-file { '/home/jhalpert':
+file { '/home/jhalpert/skel':
     ensure => 'directory',
     owner => 'jhalpert',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'jhalpert',
 }
-file { '/home/pbeesly':
+file { '/home/pbeesly/skel':
     ensure => 'directory',
     owner => 'pbeesly',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'pbeesly',
 }
-file { '/home/abernard':
+file { '/home/abernard/skel':
     ensure => 'directory',
     owner => 'abernard',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'abernard',
 }
-file { '/home/amartin':
+file { '/home/amartin/skel':
     ensure => 'directory',
     owner => 'amartin',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'amartin',
 }
-file { '/home/kkapoor':
+file { '/home/kkapoor/skel':
     ensure => 'directory',
     owner => 'kkapoor',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'kkapoor',
 }
-file { '/home/omartinez':
+file { '/home/omartinez/skel':
     ensure => 'directory',
     owner => 'omartinez',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'omartinez',
 }
-file { '/home/dphilbin':
+file { '/home/dphilbin/skel':
     ensure => 'directory',
     owner => 'dphilbin',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'dphilbin',
 }
-file { '/home/tflenderson':
+file { '/home/tflenderson/skel':
     ensure => 'directory',
     owner => 'tflenderson',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'tflenderson',
 }
-file { '/home/kmalone':
+file { '/home/kmalone/skel':
     ensure => 'directory',
     owner => 'kmalone',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'kmalone',
 }
-file { '/home/plapin':
+file { '/home/plapin/skel':
     ensure => 'directory',
     owner => 'plapin',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'plapin',
 }
-file { '/home/shudson':
+file { '/home/shudson/skel':
     ensure => 'directory',
     owner => 'shudson',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'shudson',
 }
-file { '/home/mpalmer':
+file { '/home/mpalmer/skel':
     ensure => 'directory',
     owner => 'mpalmer',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'mpalmer',
 }
-file { '/home/cbratton':
+file { '/home/cbratton/skel':
     ensure => 'directory',
     owner => 'cbratton',
-    source => '/etc/skel',
+    source => 'file:///etc/skel',
     recurse => true,
     group  => 'cbratton',
 }
